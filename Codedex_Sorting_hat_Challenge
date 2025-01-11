@@ -1,0 +1,128 @@
+#This is the python practice question that is given as the coding practical challenge from codedex.io webssite.
+#The question for the challenge is written below.
+=============================================================================== S O R T I N G H A T - C H A L L E N G E ======================================================================================================================
+#Instructions:
+''' The Sorting Hat is a magical talking hat at Hogwarts School of Witchcraft and Wizardry. The hat decides which of the four "Houses" each first-year student goes to:
+    🦁 Gryffindor
+    🦅 Ravenclaw
+    🦡 Hufflepuff
+    🐍 Slytherin
+Write a program that asks the user some questions with the int() and input() functions: '''
+
+''' Q1) Do you like Dawn or Dusk?
+    1) Dawn
+    2) Dusk
+
+    If answer is equal to 1, Gryffindor and Ravenclaw both get a +1.
+    Else if answer is equal to 2, Hufflepuff and Slytherin both get a +1.
+    Else, output the message "Wrong input."
+
+Q2) When I’m dead, I want people to remember me as:
+    1) The Good
+    2) The Great
+    3) The Wise
+    4) The Bold
+
+    If the answer is 1, Hufflepuff +2.
+    Else if answer is 2, Slytherin +2.
+    Else if answer is 3, Ravenclaw +2.
+    Else if answer is 4, Gryffindor +2.
+    Else, output the message "Wrong input."
+
+Q3) Which kind of instrument most pleases your ear?
+    1) The violin
+    2) The trumpet
+    3) The piano
+    4) The drum
+
+    If the answer is 1, Slytherin +4.
+    Else if the answer is 2, Hufflepuff +4.
+    Else if the answer is 3, Ravenclaw +4.
+    Else if the answer is 4, Gryffindor +4.
+    Else, output "Wrong input."
+
+Lastly, print out the score for each house. '''
+
+================================================================================================= C O D E - F O R - T H I S - Q U E S T I O N - P Y T H O N =====================================================================================
+
+#sortinghat.py
+
+Gryffindor = 0
+Ravenclaw = 0
+Hufflepuff = 0
+Slytherin = 0
+
+print("============================ S o r t i n g H a t Q u i z ===============================")
+
+question1= int(input('''Do you like Dawn or Dusk? 
+1.Dawn
+2.Dusk 
+choose an number to select the option : '''))
+
+if question1 == 1:
+  Gryffindor += 1
+  Ravenclaw += 1
+  answer = print("Gryffindor and Ravenclaw both got points")
+elif question1 == 2:
+  Hufflepuff += 1
+  Slytherin += 1
+  answer= print("Hufflepuff and Slytherin both got points")
+else:
+  answer = print("Wrong input, retry the question")
+
+print("------------------------------Next Question---------------------------------------------")
+
+question2 = int(input('''When i am dead, i want people to remember me as : 
+1. The GOD
+2. The Great
+3. The Wise 
+4. The Bold
+choose an option and enter an number from above : '''))
+
+if question2 == 1:
+  Hufflepuff += 2
+  print(" Hufflepuff got +2 points.")
+elif question2 == 2:
+  Slytherin += 2
+  print("Slytherin got +2 points.")
+elif question2 == 3:
+  Ravenclaw += 2
+  print("Ravenclaw got +2 points.")
+elif question2 == 4:
+   Gryffindor += 2
+   print("Gryffindor got +2 points.") 
+else:
+    print("wrong input, choose an option from above")
+
+print("----------------------------Next Question--------------------------------------------")
+
+question3 = int(input('''Which kind of instrument most pleases your ear?
+    1) The violin
+    2) The trumpet
+    3) The piano
+    4) The drum 
+    choose an option and enter an number from above :  '''))
+
+if question3 == 1:
+   Slytherin += 4
+   print("Slytherin got +4 points")
+elif question3 == 2:
+  Hufflepuff += 4
+  print("Hufflepuff got +4 points")
+elif question3 == 3:
+  Ravenclaw += 4
+  print("Ravenclaw got +4 Points.")
+elif question3 == 4:
+   Gryffindor += 4
+   print(" Gryffindor got +4 points")
+else:
+  print("Lets start from the beginning")
+
+print("=============================Total house scores=========================================")
+
+print("🦁 Gryffindor", Gryffindor)
+print("🦅 Ravenclaw", Ravenclaw)
+print("🦡 Hufflepuff", Hufflepuff)
+print("🐍 Slytherin", Slytherin)
+
+
